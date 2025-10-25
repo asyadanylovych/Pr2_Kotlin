@@ -42,6 +42,12 @@ fun main() {
     println("Валовий викид газу: %.2f т".format(gasEmission))
 
     println("\nЗагальний валовий викид: %.2f т".format(totalEmission))
+
+    // Контрольний приклад
+    val kControl = calculateKCoal(25.20, 0.80, 1.5, 0.985, 20.47, 1.5)
+    println("\n Контрольний приклад ")
+    println("Розрахований показник емісії (k): %.2f г/ГДж".format(kControl))
+
 }
 
 // Формула (2.2) для вугілля
@@ -58,3 +64,4 @@ fun calculateKOil(a: Double, awin: Double, eta: Double, q: Double): Double {
 fun calculateEmission(k: Double, q: Double, b: Double): Double {
     return 1e-6 * k * q * b
 }
+
